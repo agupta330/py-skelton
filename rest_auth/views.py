@@ -18,8 +18,6 @@ from .app_settings import (
     PasswordChangeSerializer
 )
 
-logger = logging.getLogger(__name__)
-
 class LoginView(GenericAPIView):
     """
     Check the credentials and return the REST Token

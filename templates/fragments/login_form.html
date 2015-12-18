@@ -28,8 +28,6 @@
       });
     </script>
     {% block script %}{% endblock %}
-
-
 <!-- Top content -->
 <div class="top-content">
 
@@ -58,7 +56,8 @@
                     </div>
                     <div class="form-bottom">
                        <!-- Signup form -->
-                        <form class="form-horizontal ajax-post" method="post" role="form" action="{% url 'rest_login' %}">
+                        <form class="form-horizontal ajax-post" method="post" role="form" action="{% url 'rest_login' %}">    
+                            {% csrf_token %}
                              <div class="form-group">
                                 <div class="col-sm-12">
                                     <input name="username" type="text" class="form-control" id="username" placeholder="Username">
